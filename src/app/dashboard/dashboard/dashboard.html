@@ -1,0 +1,82 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Employee Dashboard</h2>
+        </div>
+    </div>
+    <div class="row mt-5">
+
+        <!-- Profile Card -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+
+                <div class="card-header bg-white">
+                    <div class="d-flex align-items-center">
+
+                        <!-- Profile Image -->
+                        <img src="https://img.freepik.com/premium-photo/man-with-glasses_916191-430008.jpg"
+                            class="img-thumbnail me-3" alt="Profile" width="150" height="150" />
+
+                        <!-- Profile Details -->
+                        <div>
+                            <h5 class="text-black mb-1">Stephan Peralt</h5>
+                            <p class="text-black fs-12 mb-0">Senior Product Designer</p>
+                            <div class="d-flex align-items-center fs-12">
+                                <i class="ti ti-point-filled text-primary me-1"></i>
+                                <span>UI/UX Design</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <!-- Body content here -->
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Leave Card -->
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header">Mark Attendance</div>
+                <div class="card-body">
+                    <div class="mb-4 text-center">
+                        <!-- <h6 class="fw-medium text-gray-5 mb-1">Attendance</h6> -->
+                        <h4>{{dateandtime}}</h4>
+                    </div>
+                    <div class="attendance-circle-progress attendance-progress mx-auto mb-3" data-value="65">
+                        <span class="progress-left">
+                            <span class="progress-bar border-success" style="transform: rotate(54deg);"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar border-success" style="transform: rotate(180deg);"></span>
+                        </span>
+                        <div class="total-work-hours text-center w-100">
+                            <span class="fs-13 d-block mb-1">Total Hours</span>
+                            <h6>5:45:32</h6>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="badge badge-dark badge-md mb-3">Production : 3.45 hrs</div>
+                        <h6 class="fw-medium d-flex align-items-center justify-content-center mb-4">
+                            <i class="ti ti-fingerprint text-primary me-1"></i>
+                            Punch In at 10.00 AM
+                        </h6>
+                        @if(btnstatus == 0){
+                        <button  class="btn btn-success w-25 ms-2 " (click)="punchIn()">Punch In </button>
+                        } @else {
+                        <button class="btn btn-danger w-25"  (click)="punchOut()">Punch Out</button>
+                        }
+
+                    </div>
+                </div>
+                <!-- <div class="card-footer">Footer</div> -->
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
