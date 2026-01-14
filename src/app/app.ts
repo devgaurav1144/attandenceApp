@@ -16,7 +16,7 @@ export class App {
   }
 
   //PointerEvent is just event type 
-  handlerEvent(event:PointerEvent){
+  handlerEvent(event:PointerEvent | Event |MouseEvent){
     console.log(event)
   }
 
